@@ -14,9 +14,9 @@ import { BsCalendar3, BsThreeDots, BsCardImage } from 'react-icons/bs';
 
 function Widgets({ articles }) {
   return (
-    <div className="hidden xl:inline space-y-2 sticky top-[0px]">
+    <div className="hidden xl:inline space-y-2 ">
       {/* Feed top section */}
-      <div className="bg-white dark:bg-[#1D2226] rounded-lg flex flex-col pt-4 mb-2">
+      <div className="bg-white border border-gray-300 dark:border-none dark:bg-[#1D2226] rounded-lg flex flex-col pt-4 mb-2">
         {/* Add your feed */}
         <div className="flex items-center justify-between text-green-700 dark:text-white/75">
           <p className="text-left font-semibold cursor-pointer px-4">
@@ -136,96 +136,97 @@ function Widgets({ articles }) {
       </div>
 
       {/* News */}
-      <div className="bg-white dark:bg-[#1D2226] py-2.5 rounded-lg space-y-2 overflow-hidden border border-gray-300 dark:border-none">
-        <div className="flex items-center justify-between font-bold px-2.5 text-green-700 dark:text-white/75">
-          <h4>Hustle News</h4>
-          <InfoRoundedIcon className="h-5 w-5" />
-        </div>
-
-        <div className="space-y-1">
-          {articles.slice(0, 5).map((article) => (
-            <div
-              key={article.url}
-              className="flex space-x-2 items-center cursor-pointer hover:bg-black/10 dark:hover:bg-black/20 px-2.5 py-1"
-            >
-              <FiberManualRecordRoundedIcon className="!h-2 !w-2" />
-              <div>
-                <h5 className="max-w-xs font-medium text-sm truncate pr-10">
-                  {article.title}
-                </h5>
-                <TimeAgo
-                  datetime={article.publishedAt}
-                  className="text-xs mt-0.5 dark:text-white/75 opacity-80"
-                />
+      <div className="  space-y-2 overflow-hidden   sticky top-20">
+        <div className="rounded-lg py-2.5 border border-gray-300 dark:border-none bg-white dark:bg-[#1D2226] ">
+          <div className="flex items-center justify-between font-bold px-2.5 text-green-700 dark:text-white/75">
+            <h4>Hustle News</h4>
+            <InfoRoundedIcon className="h-5 w-5" />
+          </div>
+          <div className="space-y-1">
+            {articles.slice(0, 5).map((article) => (
+              <div
+                key={article.url}
+                className="flex space-x-2 items-center cursor-pointer hover:bg-black/10 dark:hover:bg-black/20 px-2.5 py-1"
+              >
+                <FiberManualRecordRoundedIcon className="!h-2 !w-2" />
+                <div>
+                  <h5 className="max-w-xs font-medium text-sm truncate pr-10">
+                    {article.title}
+                  </h5>
+                  <TimeAgo
+                    datetime={article.publishedAt}
+                    className="text-xs mt-0.5 dark:text-white/75 opacity-80"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Footer Section */}
-      <div className="flex flex-col items-center pt-4 pb-[50px] ">
-        {/* line1 */}
-        <div className="flex mb-[5px]">
-          <p className="text-gray-500 dark:text-white/75 text-[12px] cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
-            About
-          </p>
-          <p className="text-gray-500 dark:text-white/75 text-[12px] mr-5 cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
-            Accessibility
-          </p>
-          <p className="text-gray-500 dark:text-white/75 text-[12px] cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
-            Help Center
-          </p>
-        </div>
-        {/* line2 */}
-        <div className="flex mb-[5px]">
-          <div className="flex mr-5">
-            <p className="text-gray-500 dark:text-white/75 text-[12px]  cursor-pointer hover:underline decoration-green-700 hover:text-green-700">
-              Privacy & Terms
-            </p>
-            <HiChevronDown
-              size={20}
-              className="text-gray-500 dark:text-white/75 cursor-pointer hover:underline decoration-green-700 hover:text-green-700"
-            />
-          </div>
-          <p className="text-gray-500 dark:text-white/75 text-[12px] cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
-            Ad Choices
-          </p>
-        </div>
-        {/* line3 */}
-        <div className="flex mb-[5px]">
-          <div className="flex mr-5">
+        {/* Footer Section */}
+        <div className="flex flex-col items-center pt-4 pb-[50px] ">
+          {/* line1 */}
+          <div className="flex mb-[5px]">
             <p className="text-gray-500 dark:text-white/75 text-[12px] cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
-              Advertising
+              About
             </p>
-            <p className="text-gray-500 dark:text-white/75 text-[12px]  cursor-pointer hover:underline decoration-green-700 hover:text-green-700">
-              Business Services
+            <p className="text-gray-500 dark:text-white/75 text-[12px] mr-5 cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
+              Accessibility
             </p>
-            <HiChevronDown
-              size={20}
-              className="text-gray-500 dark:text-white/75 cursor-pointer hover:underline decoration-green-700 hover:text-green-700"
-            />
+            <p className="text-gray-500 dark:text-white/75 text-[12px] cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
+              Help Center
+            </p>
           </div>
-        </div>
-        {/* line4 */}
-        <div className="flex mb-[20px]">
-          <p className="text-gray-500 dark:text-white/75 text-[12px] mr-5 cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
-            Get the HustleHub app
-          </p>
-          <p className="text-gray-500 dark:text-white/75 text-[12px] cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
-            More
-          </p>
-        </div>
-        {/* copyright line */}
-        <div className="flex mr-5 items-center">
-          <img
-            src="/hustle_hub_logo_footer.svg"
-            alt=""
-            className="h-[15px] rounded-[] mr-1 cursor-pointer"
-          />
-          <p className="text-gray-500 dark:text-white/75 text-[12px] font-semibold cursor-pointer">
-            © 2022 - Ifeanyi Umeh
-          </p>
+          {/* line2 */}
+          <div className="flex mb-[5px]">
+            <div className="flex mr-5">
+              <p className="text-gray-500 dark:text-white/75 text-[12px]  cursor-pointer hover:underline decoration-green-700 hover:text-green-700">
+                Privacy & Terms
+              </p>
+              <HiChevronDown
+                size={20}
+                className="text-gray-500 dark:text-white/75 cursor-pointer hover:underline decoration-green-700 hover:text-green-700"
+              />
+            </div>
+            <p className="text-gray-500 dark:text-white/75 text-[12px] cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
+              Ad Choices
+            </p>
+          </div>
+          {/* line3 */}
+          <div className="flex mb-[5px]">
+            <div className="flex mr-5">
+              <p className="text-gray-500 dark:text-white/75 text-[12px] cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
+                Advertising
+              </p>
+              <p className="text-gray-500 dark:text-white/75 text-[12px]  cursor-pointer hover:underline decoration-green-700 hover:text-green-700">
+                Business Services
+              </p>
+              <HiChevronDown
+                size={20}
+                className="text-gray-500 dark:text-white/75 cursor-pointer hover:underline decoration-green-700 hover:text-green-700"
+              />
+            </div>
+          </div>
+          {/* line4 */}
+          <div className="flex mb-[20px]">
+            <p className="text-gray-500 dark:text-white/75 text-[12px] mr-5 cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
+              Get the HustleHub app
+            </p>
+            <p className="text-gray-500 dark:text-white/75 text-[12px] cursor-pointer mr-5 hover:underline decoration-green-700 hover:text-green-700">
+              More
+            </p>
+          </div>
+          {/* copyright line */}
+          <div className="flex mr-5 items-center">
+            <img
+              src="/hustle_hub_logo_footer.svg"
+              alt=""
+              className="h-[15px] rounded-[] mr-1 cursor-pointer"
+            />
+            <p className="text-gray-500 dark:text-white/75 text-[12px] font-semibold cursor-pointer">
+              © 2022 - Ifeanyi Umeh
+            </p>
+          </div>
         </div>
       </div>
 
