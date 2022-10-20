@@ -1,8 +1,8 @@
-import { Avatar } from "@mui/material";
-import Image from "next/image";
-import BookmarkOutlinedIcon from "@mui/icons-material/BookmarkOutlined";
-import AddRoundedIcon from "@mui/icons-material/AddRounded";
-import { signOut, useSession } from "next-auth/react";
+import { Avatar } from '@mui/material';
+import Image from 'next/image';
+import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import { signOut, useSession } from 'next-auth/react';
 
 function Sidebar() {
   const { data: session } = useSession();
@@ -12,7 +12,7 @@ function Sidebar() {
       {/* Top */}
       <div className="bg-white dark:bg-[#1D2226] rounded-lg overflow-hidden relative flex flex-col items-center text-center border border-gray-300 dark:border-none">
         <div className="relative w-full h-14">
-          <Image src="https://rb.gy/i26zak" layout="fill" priority />
+          <Image src="https://rb.gy/i26zak" layout="fill" priority alt="logo" />
         </div>
         <Avatar
           onClick={signOut}
@@ -45,7 +45,7 @@ function Sidebar() {
               Access exclusive tools & insights
             </h4>
             <h4 className="dark:text-white font-medium">
-              <span className="w-3 h-3 bg-gradient-to-tr from-yellow-700 to-yellow-200 inline-block rounded-sm mr-1" />{" "}
+              <span className="w-3 h-3 bg-gradient-to-tr from-yellow-700 to-yellow-200 inline-block rounded-sm mr-1" />{' '}
               Access HustleHub for free
             </h4>
           </div>
@@ -60,14 +60,20 @@ function Sidebar() {
       <div className="hidden md:flex bg-white dark:bg-[#1D2226] text-black/70 dark:text-white/75 rounded-lg overflow-hidden flex-col space-y-2 pt-2.5 sticky top-20 border border-gray-300 dark:border-none">
         {/* <p className="sidebarLink">Groups</p> */}
         <div className="flex items-center justify-between">
-          <p className="sidebarLink text-green-700 dark:text-white/75">Groups</p>
+          <p className="sidebarLink text-green-700 dark:text-white/75">
+            Groups
+          </p>
           <AddRoundedIcon className="!h-5 pr-[5px]" />
         </div>
         <div className="flex items-center justify-between">
-          <p className="sidebarLink text-green-700 dark:text-white/75">Events</p>
+          <p className="sidebarLink text-green-700 dark:text-white/75">
+            Events
+          </p>
           <AddRoundedIcon className="!h-5 pr-[5px]" />
         </div>
-        <p className="sidebarLink text-green-700 dark:text-white/75">Followed Hashtags</p>
+        <p className="sidebarLink text-green-700 dark:text-white/75">
+          Followed Hashtags
+        </p>
         <div className="sidebarButton text-center">
           <h4 className="dark:text-white font-medium text-sm">Discover More</h4>
         </div>

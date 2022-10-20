@@ -19,7 +19,7 @@ function Home({ providers }) {
       <div className="">
         <header className="flex justify-between items-center py-4 px-[20px] lg:px-[220px]">
           <div className="relative w-36 h-10">
-            <Image src="/hh_logo1.svg" layout="fill" objectFit="contain" />
+            <Image src="/hh_logo1.svg" layout="fill" objectFit="contain" alt="logo"/>
           </div>
           <div className="flex items-center ">
             {/* sm:divide-x divide-gray-300 */}
@@ -69,7 +69,7 @@ function Home({ providers }) {
             </div>
           </div>
           <div className="relative xl:absolute order-first w-80 h-80 xl:w-[650px] xl:h-[650px] xl:top-14 right-5 xl:right-[100px]">
-            <Image src="/work_bkg.svg" layout="fill" priority />
+            <Image src="/work_bkg.svg" layout="fill" priority alt="image_background"/>
           </div>
         </main>
       </div>

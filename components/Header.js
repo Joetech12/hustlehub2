@@ -34,9 +34,9 @@ function Header() {
         {mounted && (
           <>
             {resolvedTheme === "dark" ? (
-              <Image src="/hustle_hub_logo_white.svg" width={45} height={45} />
+              <Image src="/hustle_hub_logo_white.svg" width={45} height={45} alt="logo"/>
             ) : (
-              <Image src="/hustle_hub_logo_green.svg" width={55} height={55} />
+              <Image src="/hustle_hub_logo_green.svg" width={55} height={55} alt="logo"/>
             )}
           </>
         )}
