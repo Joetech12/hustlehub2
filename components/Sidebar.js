@@ -32,11 +32,11 @@ function Sidebar() {
           <div className="font-medium sidebarButton space-y-0.5">
             <div className="flex justify-between space-x-2">
               <h4>Profile views</h4>
-              <span className="text-green-700">0</span>
+              <span className="text-green-700 dark:text-white/75">0</span>
             </div>
             <div className="flex justify-between space-x-2">
               <h4>Post views</h4>
-              <span className="text-green-700">0</span>
+              <span className="text-green-700 dark:text-white/75">0</span>
             </div>
           </div>
 
@@ -60,14 +60,14 @@ function Sidebar() {
       <div className="hidden md:flex bg-white dark:bg-[#1D2226] text-black/70 dark:text-white/75 rounded-lg overflow-hidden flex-col space-y-2 pt-2.5 sticky top-20 border border-gray-300 dark:border-none">
         {/* <p className="sidebarLink">Groups</p> */}
         <div className="flex items-center justify-between">
-          <p className="sidebarLink text-green-700">Groups</p>
+          <p className="sidebarLink text-green-700 dark:text-white/75">Groups</p>
           <AddRoundedIcon className="!h-5 pr-[5px]" />
         </div>
         <div className="flex items-center justify-between">
-          <p className="sidebarLink text-green-700">Events</p>
+          <p className="sidebarLink text-green-700 dark:text-white/75">Events</p>
           <AddRoundedIcon className="!h-5 pr-[5px]" />
         </div>
-        <p className="sidebarLink text-green-700">Followed Hashtags</p>
+        <p className="sidebarLink text-green-700 dark:text-white/75">Followed Hashtags</p>
         <div className="sidebarButton text-center">
           <h4 className="dark:text-white font-medium text-sm">Discover More</h4>
         </div>
