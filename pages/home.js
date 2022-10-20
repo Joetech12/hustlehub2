@@ -46,29 +46,29 @@ function Home({ providers }) {
         </header>
         <main className="flex flex-col xl:flex-row items-center max-w-screen-lg mx-auto mt-[20px] xl:mt-[60px]">
           <div className="space-y-6 xl:space-y-10">
-            <h1 className="text-3xl md:text-4xl xl:text-5xl text-green-800/80 max-w-xl !leading-snug pl-4 xl:pl-0 pt-[20px]">
+            <h1 className="text-3xl md:text-4xl xl:text-5xl text-green-800/80 max-w-xl !leading-snug pl-4 xl:pl-0 md:pt-[20px] pb-[20px] text-center md:text-start">
               The No. 1 Hustle Community
             </h1>
             <div className="space-y-4 ">
-              <div className="intent">
-                <h2 className="text-xl">Search for a job</h2>
-                <ArrowForwardIosRoundedIcon className="text-gray-700" />
+              <div className="intent mx-[20px]">
+                <h2 className="md:text-xl">Search for a job</h2>
+                <ArrowForwardIosRoundedIcon className="text-gray-700 text-[18px]" />
               </div>
-              <div className="intent">
-                <h2 className="text-xl">Find a person you know</h2>
-                <ArrowForwardIosRoundedIcon className="text-gray-700" />
+              <div className="intent mx-[20px]">
+                <h2 className="md:text-xl">Find a person you know</h2>
+                <ArrowForwardIosRoundedIcon className="text-gray-700 text-[18px]" />
               </div>
-              <div className="intent">
-                <h2 className="text-xl">Learn a new skill</h2>
+              <div className="intent mx-[20px]">
+                <h2 className="md:text-xl">Learn a new skill</h2>
                 {/*  */}
-                <ArrowForwardIosRoundedIcon className="text-gray-700" />
+                <ArrowForwardIosRoundedIcon className="text-gray-700 text-[18px]" />
               </div>
-              <p className="text-green-800 pt-[50px] pb-[50px] pl-[20px] text-center xl:text-start">
+              <p className="text-green-800 pt-[50px] pb-[50px] pl-[20px] text-[14px] md:text-[16px] text-center xl:text-start">
                 © 2022 | Developed by - Ifeanyi Umeh
               </p>
             </div>
           </div>
-          <div className="relative xl:absolute order-first w-80 h-80 xl:w-[650px] xl:h-[650px] xl:top-14 right-5 xl:right-[100px]">
+          <div className="relative xl:absolute order-first w-80 h-80 xl:w-[650px] xl:h-[650px] xl:top-14 right-0 md:right-5 xl:right-[100px]">
             <Image src="/work_bkg.svg" layout="fill" priority alt="image_background"/>
           </div>
         </main>
