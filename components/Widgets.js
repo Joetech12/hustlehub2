@@ -2,14 +2,23 @@ import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 import Image from "next/image";
 import TimeAgo from "timeago-react";
+import { MdLibraryAdd } from "react-icons/md";
+import { BiWorld } from "react-icons/bi";
+import AddIcon from "@mui/icons-material/Add";
+import {
+  HiArrowNarrowRight,
+  HiChevronRight,
+  HiChevronDown,
+} from "react-icons/hi";
+import { BsCalendar3, BsThreeDots, BsCardImage } from "react-icons/bs";
 
 function Widgets({ articles }) {
   return (
     <div className="hidden xl:inline space-y-2">
       {/* News */}
       <div className="bg-white dark:bg-[#1D2226] py-2.5 rounded-lg space-y-2 w-11/12 overflow-hidden border border-gray-300 dark:border-none">
-        <div className="flex items-center justify-between font-bold px-2.5">
-          <h4>LinkedIn News</h4>
+        <div className="flex items-center justify-between font-bold px-2.5 text-green-700">
+          <h4>Hustle News</h4>
           <InfoRoundedIcon className="h-5 w-5" />
         </div>
 
@@ -33,6 +42,127 @@ function Widgets({ articles }) {
           ))}
         </div>
       </div>
+      
+      {/* Feed top section */}
+      <div className="bg-white rounded-lg border-[1px] flex flex-col pt-4 mb-2">
+        {/* Add your feed */}
+        <div className="flex items-center justify-between">
+          <p className="text-left font-semibold cursor-pointer px-4">
+            Add to your feed
+          </p>
+          <MdLibraryAdd
+            size={20}
+            className="mx-4 text-gray-500 cursor-pointer"
+          />
+        </div>
+        {/* Feed1 */}
+        <div className="flex flex-col w-full items-start px-3 py-2">
+          <div className="flex">
+            <img
+              src="/ACCESS-BANK-LOGO.png"
+              alt=""
+              className="h-[55px] rounded-[150px] mr-2 cursor-pointer"
+            />
+            <div>
+              <div className="flex flex-col items-start">
+                {/* Name */}
+                <p className="font-semibold text-gray-600 text-[14px]  cursor-pointer ">
+                  <span className="">Access Bank Plc</span>
+                </p>
+                {/* Title */}
+                <p className="font-normal text-gray-600 text-[12px] cursor-pointer mb-2">
+                  Company • Financial Services
+                </p>
+                {/* Follow + */}
+                <div className="flex items-center justify-center outline outline-[1.5px] outline-gray-600 px-3 py-1 rounded-[20px]  hover:bg-gray-600/10 hover:outline-[2px] transition-all duration-100 ease-in-out">
+                  <AddIcon
+                    sx={{ fontSize: 20 }}
+                    className="text-gray-600 cursor-pointer"
+                  />
+                  <p className="font-semibold text-gray-600 text-[14px] cursor-pointer mr-1 ">
+                    Follow
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Feed2 */}
+        <div className="flex flex-col w-full items-start px-3 py-2">
+          <div className="flex">
+            <img
+              src="/abbas.jpg"
+              alt=""
+              className="h-[55px] rounded-[150px] mr-2 cursor-pointer"
+            />
+            <div>
+              <div className="flex flex-col items-start">
+                {/* Name */}
+                <p className="font-semibold text-gray-600 text-[14px]  cursor-pointer ">
+                  <span className="">Rainat Abbas</span>
+                </p>
+                {/* Title */}
+                <p className="font-normal text-gray-600 text-[12px] cursor-pointer mb-2">
+                  Product Designer || UX Designer
+                </p>
+                {/* Follow + */}
+                <div className="flex items-center justify-center outline outline-[1.5px] outline-gray-600 px-3 py-1 rounded-[20px]  hover:bg-gray-600/10 hover:outline-[2px] transition-all duration-100 ease-in-out">
+                  <AddIcon
+                    sx={{ fontSize: 20 }}
+                    className="text-gray-600 cursor-pointer"
+                  />
+                  <p className="font-semibold text-gray-600 text-[14px] cursor-pointer mr-1 ">
+                    Follow
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Feed3 */}
+        <div className="flex flex-col w-full items-start px-3 py-2">
+          <div className="flex">
+            <img
+              src="/kfclogo.png"
+              alt=""
+              className="h-[55px] rounded-[100px] mr-2 cursor-pointer"
+            />
+            <div>
+              <div className="flex flex-col items-start">
+                {/* Name */}
+                <p className="font-semibold text-gray-600 text-[14px]  cursor-pointer ">
+                  <span className="">KFC Nigeria</span>
+                </p>
+                {/* Title */}
+                <p className="font-normal text-gray-600 text-[12px] cursor-pointer mb-2">
+                  Company • Food Services
+                </p>
+                {/* Follow + */}
+                <div className="flex items-center justify-center outline outline-[1.5px] outline-gray-600 px-3 py-1 rounded-[20px]  hover:bg-gray-600/10 hover:outline-[2px] transition-all duration-100 ease-in-out">
+                  <AddIcon
+                    sx={{ fontSize: 20 }}
+                    className="text-gray-600 cursor-pointer"
+                  />
+                  <p className="font-semibold text-gray-600 text-[14px] cursor-pointer mr-1 ">
+                    Follow
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* View recommendations */}
+        <div className="flex items-center hover:bg-gray-700/10 cursor-pointer">
+          <p className="text-left text-gray-500 font-semibold text-[14px] pl-4">
+            View all recommendations
+          </p>
+          <HiArrowNarrowRight
+            size={20}
+            className="ml-1 mb-3 mt-4 text-gray-500 cursor-pointer"
+          />
+        </div>
+      </div>
+
       {/* Ads */}
       <div className="bg-white dark:bg-[#1D2226] w-11/12 h-64 px-2.5 rounded-lg sticky top-20 border border-gray-300 dark:border-none">
         <div className="relative w-full h-full">

@@ -31,12 +31,12 @@ function Sidebar() {
         <div className="hidden md:inline text-left dark:text-white/75 text-sm">
           <div className="font-medium sidebarButton space-y-0.5">
             <div className="flex justify-between space-x-2">
-              <h4>Who viewed your profile</h4>
-              <span className="text-blue-500">321</span>
+              <h4>Profile views</h4>
+              <span className="text-blue-500">0</span>
             </div>
             <div className="flex justify-between space-x-2">
-              <h4>Views of your post</h4>
-              <span className="text-blue-500">1,892</span>
+              <h4>Post views</h4>
+              <span className="text-blue-500">0</span>
             </div>
           </div>
 
@@ -58,7 +58,11 @@ function Sidebar() {
       </div>
       {/* Bottom */}
       <div className="hidden md:flex bg-white dark:bg-[#1D2226] text-black/70 dark:text-white/75 rounded-lg overflow-hidden flex-col space-y-2 pt-2.5 sticky top-20 border border-gray-300 dark:border-none">
-        <p className="sidebarLink">Groups</p>
+        {/* <p className="sidebarLink">Groups</p> */}
+        <div className="flex items-center justify-between">
+          <p className="sidebarLink">Groups</p>
+          <AddRoundedIcon className="!h-5" />
+        </div>
         <div className="flex items-center justify-between">
           <p className="sidebarLink">Events</p>
           <AddRoundedIcon className="!h-5" />
