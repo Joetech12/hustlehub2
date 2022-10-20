@@ -60,6 +60,7 @@ function Home({ providers }) {
               </div>
               <div className="intent">
                 <h2 className="text-xl">Learn a new skill</h2>
+                {/*  */}
                 <ArrowForwardIosRoundedIcon className="text-gray-700" />
               </div>
               <p className="text-green-800 pt-[50px] pb-[50px] pl-[20px] text-center xl:text-start">
