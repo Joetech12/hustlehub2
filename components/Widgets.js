@@ -19,7 +19,7 @@ function Widgets({ articles }) {
       <div className="bg-white border border-gray-300 dark:border-none dark:bg-[#1D2226] rounded-lg flex flex-col pt-4 mb-2">
         {/* Add your feed */}
         <div className="flex items-center justify-between text-green-700 dark:text-white/75">
-          <p className="text-left font-semibold cursor-pointer px-4">
+          <p className="text-left font-bold cursor-pointer px-4">
             Follow co-HustleHubites
           </p>
           <MdLibraryAdd
@@ -139,7 +139,7 @@ function Widgets({ articles }) {
       <div className="  space-y-2 overflow-hidden   sticky top-20">
         <div className="rounded-lg py-2.5 border border-gray-300 dark:border-none bg-white dark:bg-[#1D2226] ">
           <div className="flex items-center justify-between font-bold px-2.5 text-green-700 dark:text-white/75">
-            <h4>Hustle News</h4>
+            <h4>Hustle Headlines</h4>
             <InfoRoundedIcon className="h-5 w-5" />
           </div>
           <div className="space-y-1">
@@ -150,7 +150,7 @@ function Widgets({ articles }) {
               >
                 <FiberManualRecordRoundedIcon className="!h-2 !w-2" />
                 <div>
-                  <h5 className="max-w-xs font-medium text-sm truncate pr-10">
+                  <h5 className="max-w-xs font-medium text-sm pr-10">
                     {article.title}
                   </h5>
                   <TimeAgo
