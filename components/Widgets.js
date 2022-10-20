@@ -14,45 +14,17 @@ import { BsCalendar3, BsThreeDots, BsCardImage } from 'react-icons/bs';
 
 function Widgets({ articles }) {
   return (
-    <div className="hidden xl:inline space-y-2">
-      {/* News */}
-      <div className="bg-white dark:bg-[#1D2226] py-2.5 rounded-lg space-y-2 overflow-hidden border border-gray-300 dark:border-none">
-        <div className="flex items-center justify-between font-bold px-2.5 text-green-700">
-          <h4>Hustle News</h4>
-          <InfoRoundedIcon className="h-5 w-5" />
-        </div>
-
-        <div className="space-y-1">
-          {articles.slice(0, 5).map((article) => (
-            <div
-              key={article.url}
-              className="flex space-x-2 items-center cursor-pointer hover:bg-black/10 dark:hover:bg-black/20 px-2.5 py-1"
-            >
-              <FiberManualRecordRoundedIcon className="!h-2 !w-2" />
-              <div>
-                <h5 className="max-w-xs font-medium text-sm truncate pr-10">
-                  {article.title}
-                </h5>
-                <TimeAgo
-                  datetime={article.publishedAt}
-                  className="text-xs mt-0.5 dark:text-white/75 opacity-80"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
+    <div className="hidden xl:inline space-y-2 sticky top-[0px]">
       {/* Feed top section */}
       <div className="bg-white dark:bg-[#1D2226] rounded-lg flex flex-col pt-4 mb-2">
         {/* Add your feed */}
-        <div className="flex items-center justify-between text-green-700">
+        <div className="flex items-center justify-between text-green-700 dark:text-white/75">
           <p className="text-left font-semibold cursor-pointer px-4">
-            Add to your feed
+            Follow co-HustleHubites
           </p>
           <MdLibraryAdd
             size={20}
-            className="mx-4 text-green-700 cursor-pointer"
+            className="mx-4 text-green-700 cursor-pointer dark:text-white/75"
           />
         </div>
         {/* Feed1 */}
@@ -91,7 +63,7 @@ function Widgets({ articles }) {
         <div className="flex flex-col w-full items-start px-3 py-2">
           <div className="flex">
             <img
-              src="/abbas.jpg"
+              src="/me.png"
               alt=""
               className="h-[55px] rounded-[150px] mr-2 cursor-pointer"
             />
@@ -99,11 +71,11 @@ function Widgets({ articles }) {
               <div className="flex flex-col items-start">
                 {/* Name */}
                 <p className="font-semibold dark:text-white/75 text-gray-600 text-[14px]  cursor-pointer ">
-                  <span className="">Rainat Abbas</span>
+                  <span className="">Ifeanyi Umeh</span>
                 </p>
                 {/* Title */}
                 <p className="font-normal dark:text-white/75 text-gray-600 text-[12px] cursor-pointer mb-2">
-                  Product Designer || UX Designer
+                  Front-end Developer | UI Designer
                 </p>
                 {/* Follow + */}
                 <div className="flex items-center justify-center outline outline-[1.5px] outline-gray-600 px-3 py-1 rounded-[20px]  hover:bg-gray-600/10 hover:outline-[2px] transition-all duration-100 ease-in-out">
@@ -160,6 +132,34 @@ function Widgets({ articles }) {
             size={20}
             className="ml-1 mb-3 mt-4 text-gray-500 dark:text-white/75 cursor-pointer"
           />
+        </div>
+      </div>
+
+      {/* News */}
+      <div className="bg-white dark:bg-[#1D2226] py-2.5 rounded-lg space-y-2 overflow-hidden border border-gray-300 dark:border-none">
+        <div className="flex items-center justify-between font-bold px-2.5 text-green-700 dark:text-white/75">
+          <h4>Hustle News</h4>
+          <InfoRoundedIcon className="h-5 w-5" />
+        </div>
+
+        <div className="space-y-1">
+          {articles.slice(0, 5).map((article) => (
+            <div
+              key={article.url}
+              className="flex space-x-2 items-center cursor-pointer hover:bg-black/10 dark:hover:bg-black/20 px-2.5 py-1"
+            >
+              <FiberManualRecordRoundedIcon className="!h-2 !w-2" />
+              <div>
+                <h5 className="max-w-xs font-medium text-sm truncate pr-10">
+                  {article.title}
+                </h5>
+                <TimeAgo
+                  datetime={article.publishedAt}
+                  className="text-xs mt-0.5 dark:text-white/75 opacity-80"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

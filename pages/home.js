@@ -63,7 +63,7 @@ function Home({ providers }) {
                 <ArrowForwardIosRoundedIcon className="text-gray-700" />
               </div>
               <p className="text-green-800 pt-[50px] pb-[50px] pl-[20px] text-center xl:text-start">
-                Developed by - Ifeanyi Umeh
+                © 2022 | Developed by - Ifeanyi Umeh
               </p>
             </div>
           </div>
